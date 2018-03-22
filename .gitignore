@@ -3,14 +3,16 @@
 *.fls
 *.log
 *.synctex.gz
-#*.pdf
+
 *.out
 *.xml
 *.bcf
 main-blx.bib
 !03_figures/*.pdf
 ~$ontpage.doc
-*main.pdf
+
+*.pdf
+!main.pdf
 
 
 *.bbl
