@@ -1,0 +1,107 @@
+% ##############################################
+% Start: Header and Footer Customization
+% ##############################################
+%
+
+% KOMA-Script code for header and footer font
+\setkomafont{pageheadfoot}{%
+	\normalfont\sffamily\bfseries
+	}
+\setkomafont{pagefoot}{%
+	\normalfont\sffamily
+	}
+\setkomafont{pagenumber}{%
+	\normalfont\rmfamily
+	}
+
+% Define width of header
+\setheadwidth[0pt]{textwithmarginpar}
+
+% Define with of header line
+\setheadsepline{0.4pt}
+
+% Define width of footer
+\setfootwidth[0pt]{text}
+% Define with of footer line (here: no line)
+\setfootsepline[text]{0pt}
+
+% Some calculations
+% calc package is needed which is loaded here: 01_Preamble/CommonPackages.tex
+% If you want to understand the calculations visit:
+% http://en.wikibooks.org/wiki/LaTeX/Page_Layout
+\newlength{\myLenghthFootAbstand}
+\setlength{\myLenghthFootAbstand}{\paperheight-1in-\topmargin- \headheight-\headsep-\textheight-\footskip}
+\newlength{\myLenghthTemp}
+\setlength{\myLenghthTemp}{\myLenghthFootAbstand+\baselineskip}
+
+% Define content of header and footer
+% Using some scrpage2 commands here. The scrpage2 package is loaded here: 01_Preamble/KOMA-Script-Packages.tex
+% Some LaTeX magic...
+% Clear all defaults
+\clearscrheadfoot
+% Header
+\ohead{%
+	\textcolor{myColorMainA}{\headmark}
+	}
+% Left (even page numbers) footer
+\lefoot%
+[% scrplain style (begin)
+	\setlength{\unitlength}{\myLenghthFootAbstand}%
+	\begin{picture}(0,0)%
+		\put(0,-1)%
+		{%
+			\makebox(0,0)[lb]%
+			{%
+				\rule{0.4pt}{\myLenghthTemp}%
+			}%
+		}%
+	\end{picture}\llap{\pagemark~}%
+]% scrplain style (end)
+%
+{% scrheadings style (begin)
+	\setlength{\unitlength}{\myLenghthFootAbstand}%
+	\begin{picture}(0,0)%
+		\put(0,-1)%
+		{%
+			\makebox(0,0)[lb]%
+			{%
+				\rule{0.4pt}{\myLenghthTemp}%
+			}%
+		}%
+	\end{picture}\llap{\pagemark~}%
+}% scrheadings style (end)
+
+% Right (odd page numbers) footer
+\rofoot%
+[% scrplain style (begin)
+	\rlap{~\pagemark}%%
+	\setlength{\unitlength}{\myLenghthFootAbstand}%
+	\begin{picture}(0,0)%
+		\put(0,-1)%
+		{%
+			\makebox(0,0)[lb]%
+			{%
+				\rule{0.4pt}{\myLenghthTemp}%
+			}%
+		}%
+	\end{picture}%
+]% scrplain style (end)
+%
+{% scrplain style (begin)
+	\rlap{~\pagemark}%%
+	\setlength{\unitlength}{\myLenghthFootAbstand}%
+	\begin{picture}(0,0)%
+		\put(0,-1)%
+		{%
+			\makebox(0,0)[lb]%
+			{%
+				\rule{0.4pt}{\myLenghthTemp}%
+			}%
+		}%
+	\end{picture}%
+}% scrplain style (end)
+
+%
+% #######################
+% End: Header and Footer Customization
+% #######################
