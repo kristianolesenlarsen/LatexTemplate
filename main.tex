@@ -28,8 +28,11 @@
 
 \addbibresource{references}
 
+\numberwithin{equation}{section}
 
 \begin{document}
+
+
 \setstretch{1.2}
 
 \maketitle
@@ -46,7 +49,6 @@
 %\clearpage
 \listoffigures
 \listoftables
-%\printacronyms[include-classes=abbrev,name=Abbreviations, heading=chapter*]
 }
 \clearpage
 \normalsize
@@ -56,6 +58,10 @@
 
 \section{The first section}
 \input{02_chapters/03_the_first_chapter}
+
+\section{The second section}
+\input{02_chapters/03_the_second_chapter}
+
 
 \clearpage
 \printbibliography
