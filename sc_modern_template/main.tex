@@ -1,0 +1,50 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass{01_preamble/report}
+\input{01_preamble/packages.tex}
+% SET TITLE SECTION INFORMATION 
+\title{Modern theme template}
+
+\author[1]{Navn Navnsen}
+\author[2]{Navn Andetnavnsen}
+\affil[1]{navn@navnsen.com} 
+\affil[2]{navn@andetnavnsen.com}
+
+\dates{\today}
+	
+% REFERENCES SETUP
+\usepackage[round, numbers, sort&compress]{natbib}
+\bibliographystyle{unsrtnat}
+
+% SET TITLES OF CONTENTS AND REFERENCES
+\addto\captionsenglish{% Replace "english" with the language you use
+  \renewcommand{\contentsname}%
+    {Table of Contents}%
+}
+\renewcommand{\refname}{References}
+    
+\begin{document}
+\maketitle
+\vskip24pt
+\begin{abstract}
+    \input{02_chapters/abstract.tex}
+\end{abstract}
+\vskip24pt
+% COMMENT NEXT LINE TO REMOVE TABLE OF CONTENTS
+\tableofcontents\vskip48pt
+\input{02_chapters/introduction.tex}
+
+%=================
+\section{Folder structure}
+\input{02_chapters/folders}
+
+\section{Bibliography}
+\input{02_chapters/bibdescription.tex}
+
+\section{Section titles}
+\input{02_chapters/sectiontest.tex}
+%=================
+\newpage
+% CHANGE THIS IF YUOR BIBFILE HAS A DIFFERENT NAME
+\bibliography{references.bib}
+
+\end{document}
