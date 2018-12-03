@@ -29,8 +29,11 @@
     \input{02_chapters/abstract.tex}
 \end{abstract}
 \vskip24pt
-% COMMENT NEXT LINE TO REMOVE TABLE OF CONTENTS
-\tableofcontents\vskip48pt
+% COMMENT NEXT LINES TO REMOVE TABLE OF CONTENTS
+\tableofcontents
+\listoffigures
+\listoftables
+\vskip48pt
 \input{02_chapters/introduction.tex}
 
 %=================
@@ -45,6 +48,7 @@
 %=================
 \newpage
 % CHANGE THIS IF YUOR BIBFILE HAS A DIFFERENT NAME
+{\footnotesize
 \bibliography{references.bib}
-
+}
 \end{document}

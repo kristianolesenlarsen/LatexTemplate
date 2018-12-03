@@ -32,6 +32,7 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{authblk}
 \RequirePackage[colorlinks=true, allcolors=green]{hyperref}
+\RequirePackage[rightcaption]{sidecap}
 
 \RequirePackage{lmodern}
 \RequirePackage[scaled]{helvet}
