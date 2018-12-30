@@ -13,7 +13,7 @@ main-blx.bib
 
 *.pdf
 !main.pdf
-
+!sc_classic_template/02_figures/*
 
 *.bbl
 *.blg
