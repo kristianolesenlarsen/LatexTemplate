@@ -41,10 +41,6 @@
 \setlength{\affilsep}{0.5em}
 
 % Font stuff
-\renewcommand\Authfont{\fontsize{9}{11}\usefont{OT1}{phv}{b}{n}}
-\renewcommand\Affilfont{\fontsize{7}{8}\usefont{OT1}{phv}{m}{n}}
-\renewcommand\AB@affilsepx{; \protect\Affilfont}
-
 \newcommand{\dates}[1]{\def\@dates{#1}}
 \newcommand{\titlefont}{\fontfamily{lmss}\bfseries\fontsize{22pt}{24pt}\selectfont}
 \newcommand{\datesfont}{\normalfont\sffamily\fontsize{7}{8}\selectfont}
@@ -65,9 +61,9 @@
 }
 
 % Left align abstract
-\renewenvironment{abstract}
- {\par\noindent\textbf{\abstractname.}\ \ignorespaces}
- {\par\medskip}
+% \renewenvironment{abstract}
+%  {\par\noindent\textbf{\abstractname.}\ \ignorespaces}
+%  {\par\medskip}
 
 % Dropcap
 \newcommand{\dropcap}[1]{\lettrine[lines=2,lraise=0.05,findent=0.1em, nindent=0em]{{\dropcapfont{#1}}}{}}
